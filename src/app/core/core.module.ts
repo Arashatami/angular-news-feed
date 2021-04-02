@@ -10,6 +10,9 @@ import { CommonModule } from '@angular/common';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    HeaderComponent
   ]
 })
 export class CoreModule { }
