@@ -1,0 +1,39 @@
+{
+  "news-feed": [
+    {
+      "id": 1,
+      "userId": 1,
+      "type": 1,
+      "content": [
+        "X",
+        "Y"
+      ]
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "type": 2,
+      "content": [
+        "P",
+        "Z"
+      ]
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "type": 2,
+      "content": [
+        "P",
+        "Z"
+      ]
+    }
+  ],
+  "users": [],
+  "friends": [
+    {
+      "userId": 1,
+      "name":"Arash Hatami"
+    }
+  ],
+  "favorite-news-feed": []
+}
