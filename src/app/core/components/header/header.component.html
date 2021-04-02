@@ -1,1 +1,28 @@
-<p>header works!</p>
+// todo add css variables and remove inline style
+<mat-toolbar>
+  <div>
+    <div class="navbar">
+      <div fxLayout="row inline">
+        <button
+          mat-icon-button
+          (click)="toggle()"
+          [ngStyle.lt-md]="{ height: '100%' }"
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <mat-icon class="menu-logo" style="margin-top: 5px">menu</mat-icon>
+        </button>
+
+        <img class="logo" src="./assets/images/logo.png" />
+
+        <div
+          class="menu-nav-items"
+          fxHide
+          fxShow.lg
+          fxShow.md
+          fxShow.xl
+          fxLayoutAlign="center center"
+        ></div>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
