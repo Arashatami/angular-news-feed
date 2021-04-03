@@ -4,8 +4,7 @@ import { environment } from 'src/environments/environment';
 import { JwtHelperService } from "@auth0/angular-jwt";
 import { tap } from 'rxjs/internal/operators/tap';
 import { Router } from '@angular/router';
-import { CookieService } from 'ngx-cookie-service';
-import { catchError } from 'rxjs/internal/operators/catchError';
+import { CookieService } from 'ngx-cookie';
 
 @Injectable({
   providedIn: 'root'
@@ -40,7 +39,7 @@ export class LoginService {
   }
 
   logout() {
-    this.cookieService.deleteAll('/');
+    this.cookieService.removeAll({ path: '/' });
     this.router.navigate(['login']);
   }
 

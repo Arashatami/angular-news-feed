@@ -8,11 +8,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
-import { CookieService } from 'ngx-cookie-service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CookieModule } from 'ngx-cookie';
 
 
 @NgModule({
@@ -31,6 +31,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     MatFormFieldModule,
     ReactiveFormsModule,
+    CookieModule
   ],
   exports: [
     CommonModule,
@@ -42,14 +43,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatDialogModule,
     MatMenuModule,
     NgScrollbarModule,
-    CookieService,
     MatSnackBarModule,
     MatCardModule,
     MatFormFieldModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CookieModule
   ],
-  providers: [
-    CookieService,
-  ]
 })
 export class SharedModule { }

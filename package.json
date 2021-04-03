@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "~11.2.7",
     "@angular/router": "~11.2.7",
     "@auth0/angular-jwt": "^5.0.2",
+    "ngx-cookie": "^5.0.2",
     "ngx-cookie-service": "^11.0.2",
     "ngx-scrollbar": "^7.5.4",
     "rxjs": "~6.6.0",
