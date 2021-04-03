@@ -10,6 +10,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
 import { CookieService } from 'ngx-cookie-service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +27,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatDialogModule,
     MatMenuModule,
     NgScrollbarModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCardModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
   ],
   exports: [
     CommonModule,
@@ -37,10 +43,13 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatMenuModule,
     NgScrollbarModule,
     CookieService,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCardModule,
+    MatFormFieldModule,
+    ReactiveFormsModule
   ],
   providers: [
-    CookieService
+    CookieService,
   ]
 })
 export class SharedModule { }

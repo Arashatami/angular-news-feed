@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve && ",
+    "start": "ng serve",
     "server": "json-server-auth db.json -r routes.json",
     "build": "ng build",
     "test": "ng test",
