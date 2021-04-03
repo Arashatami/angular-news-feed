@@ -10,6 +10,7 @@ import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Injectable({
@@ -20,6 +21,7 @@ export class HttpResponseInterceptor implements HttpInterceptor {
   constructor(
     private router: Router,
     private loginService: LoginService,
+    private _snackBar: MatSnackBar
   ) {
   }
 
@@ -31,7 +33,10 @@ export class HttpResponseInterceptor implements HttpInterceptor {
           if (error.status === 401) {
             this.loginService.logout();
             this.router.navigate(['/login']);
-            throw error;
+          }
+          else {
+            debugger
+            this._snackBar.open("");
           }
           throw error;
         })

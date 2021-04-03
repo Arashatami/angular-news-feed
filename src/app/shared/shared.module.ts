@@ -8,6 +8,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
+import { CookieService } from 'ngx-cookie-service';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatIconModule,
     MatDialogModule,
     MatMenuModule,
-    NgScrollbarModule
+    NgScrollbarModule,
+    MatSnackBarModule
   ],
   exports: [
     CommonModule,
@@ -32,7 +35,12 @@ import { MatMenuModule } from '@angular/material/menu';
     MatIconModule,
     MatDialogModule,
     MatMenuModule,
-    NgScrollbarModule
+    NgScrollbarModule,
+    CookieService,
+    MatSnackBarModule
+  ],
+  providers: [
+    CookieService
   ]
 })
 export class SharedModule { }

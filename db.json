@@ -28,11 +28,19 @@
       ]
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "email": "arash@example.com",
+      "password": "$2a$10$EyvmBfezlcnPtJWvHUYWeu/zuqeFaEb2HIE.SpXL48dsQDBt6r8pG",
+      "name": "Arash Hatami",
+      "phoneNumber": "+989909238293",
+      "id": 1
+    }
+  ],
   "friends": [
     {
       "userId": 1,
-      "name":"Arash Hatami"
+      "name": "Arash Hatami"
     }
   ],
   "favorite-news-feed": []
