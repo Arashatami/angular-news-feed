@@ -36,7 +36,7 @@ export class HttpResponseInterceptor implements HttpInterceptor {
           }
           else {
             debugger
-            this._snackBar.open("");
+            this._snackBar.open(error.error);
           }
           throw error;
         })

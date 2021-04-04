@@ -7,6 +7,10 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CookieModule } from 'ngx-cookie';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpRequestInterceptor } from './core/interceptor/http-request-interceptor.service';
+import { HttpResponseInterceptor } from './core/interceptor/http-response-interceptor.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +23,18 @@ import { CookieModule } from 'ngx-cookie';
     BrowserAnimationsModule,
     CookieModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpRequestInterceptor,
+      multi: true,
+  },
+  {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpResponseInterceptor,
+      multi: true,
+  },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

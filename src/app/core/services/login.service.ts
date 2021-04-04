@@ -17,9 +17,9 @@ export class LoginService {
     private _cookieService: CookieService
   ) { }
 
-  loginUser(username: string, password: string) {
+  loginUser(email: string, password: string) {
     const body = {
-      username,
+      email,
       password
     };
     const headers = new HttpHeaders({

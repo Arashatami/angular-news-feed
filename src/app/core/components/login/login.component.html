@@ -5,13 +5,16 @@
   <mat-card-content fxLayout="row" fxLayoutAlign="center center">
     <form [formGroup]="loginForm" (ngSubmit)="submit()">
       <mat-form-field appearance="outline" fxLayout="row">
-        <mat-label>Username</mat-label>
+        <mat-label>email</mat-label>
         <input
           type="text"
           matInput
-          placeholder="Username"
-          formControlName="username"
+          placeholder="Email"
+          formControlName="email"
         />
+        <mat-error *ngIf="loginForm.get('email')?.hasError('pattern')">
+          Email is not Valid.
+      </mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline" fxLayout="row">
@@ -28,8 +31,8 @@
         {{ error }}
       </p>
 
-      <div class="button">
-        <button type="submit" mat-button>Login</button>
+      <div fxLayout="row" fxLayoutAlign="center">
+        <button type="submit"  mat-raised-button color="primary">Login</button>
       </div>
     </form>
   </mat-card-content>
