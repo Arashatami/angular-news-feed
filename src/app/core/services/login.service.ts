@@ -22,13 +22,9 @@ export class LoginService {
       email,
       password
     };
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-    });
+
     return this._http
-      .post(`${environment.mockServer}/login`, body, {
-        headers,
-      })
+      .post(`${environment.mockServer}/login`, body)
       .pipe(
         tap((res: any) => {
           const helper = new JwtHelperService();
