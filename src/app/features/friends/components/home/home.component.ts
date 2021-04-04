@@ -1,14 +1,14 @@
-import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, AfterViewInit, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { MenuService } from './core/services/menu.service';
+import { MenuService } from 'src/app/core/services/menu.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements AfterViewInit {
 
   @ViewChild('menu') public menu: MatDrawer;
   mobileQuery: MediaQueryList;

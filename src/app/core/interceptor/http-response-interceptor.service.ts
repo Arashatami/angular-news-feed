@@ -19,8 +19,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class HttpResponseInterceptor implements HttpInterceptor {
 
   constructor(
-    private router: Router,
-    private loginService: LoginService,
+    private _router: Router,
+    private _loginService: LoginService,
     private _snackBar: MatSnackBar
   ) {
   }
@@ -31,8 +31,8 @@ export class HttpResponseInterceptor implements HttpInterceptor {
       .pipe(
         catchError((error: HttpErrorResponse) => {
           if (error.status === 401) {
-            this.loginService.logout();
-            this.router.navigate(['/login']);
+            this._loginService.logout();
+            this._router.navigate(['/login']);
           }
           else {
             debugger

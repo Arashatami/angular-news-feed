@@ -3,6 +3,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './components/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -13,10 +14,12 @@ import { LoginComponent } from './components/login/login.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    HttpClientModule
   ]
 })
 export class CoreModule { }

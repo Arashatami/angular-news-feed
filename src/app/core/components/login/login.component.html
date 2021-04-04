@@ -3,28 +3,26 @@
     Login
   </mat-card-title>
   <mat-card-content fxLayout="row" fxLayoutAlign="center center">
-    <form [formGroup]="login" (ngSubmit)="submit()">
-      <p>
-        <mat-form-field>
-          <input
-            type="text"
-            matInput
-            placeholder="Username"
-            formControlName="username"
-          />
-        </mat-form-field>
-      </p>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <mat-form-field appearance="outline" fxLayout="row">
+        <mat-label>Username</mat-label>
+        <input
+          type="text"
+          matInput
+          placeholder="Username"
+          formControlName="username"
+        />
+      </mat-form-field>
 
-      <p>
-        <mat-form-field>
-          <input
-            type="password"
-            matInput
-            placeholder="Password"
-            formControlName="password"
-          />
-        </mat-form-field>
-      </p>
+      <mat-form-field appearance="outline" fxLayout="row">
+        <mat-label>Password</mat-label>
+        <input
+          type="password"
+          matInput
+          placeholder="Password"
+          formControlName="password"
+        />
+      </mat-form-field>
 
       <p *ngIf="error" class="error">
         {{ error }}

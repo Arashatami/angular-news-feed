@@ -1,4 +1,4 @@
-import { LoginService } from './core/services/login.service';
+import { LoginComponent } from './core/components/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GuardService } from './core/guards/guard.service';
@@ -6,7 +6,7 @@ import { GuardService } from './core/guards/guard.service';
 const routes: Routes = [
   {
     path: "login",
-    component: LoginService
+    component: LoginComponent
   },
   {
     path: 'home',
