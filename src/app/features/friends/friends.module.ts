@@ -6,8 +6,14 @@ import { FriendsListComponent } from './components/friends-list/friends-list.com
 import { NewsFeedComponent } from './components/news-feed/news-feed.component';
 import { CoreModule } from 'src/app/core/core.module';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { RouterModule } from '@angular/router';
 
-
+const Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -16,6 +22,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     NewsFeedComponent
   ],
   imports: [
+    RouterModule.forChild(Routes),
     CommonModule,
     CoreModule,
     SharedModule,
