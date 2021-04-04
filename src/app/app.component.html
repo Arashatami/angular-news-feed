@@ -1,9 +1,1 @@
-<app-header></app-header>
-<mat-drawer-container>
-  <mat-drawer #menu [mode]="mobileQuery.matches ? 'over' : 'side'" autoFocus="false">
-    <app-friends-list></app-friends-list>
-  </mat-drawer>
-  <mat-drawer-content>
-    <router-outlet></router-outlet>
-  </mat-drawer-content>
-</mat-drawer-container>
+<router-outlet></router-outlet>

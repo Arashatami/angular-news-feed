@@ -12,9 +12,9 @@ import { CookieService } from 'ngx-cookie';
 export class LoginService {
 
   constructor(
-    private http: HttpClient,
-    private router: Router,
-    private cookieService: CookieService
+    private _http: HttpClient,
+    private _router: Router,
+    private _cookieService: CookieService
   ) { }
 
   loginUser(username: string, password: string) {
@@ -25,8 +25,7 @@ export class LoginService {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-
-    return this.http
+    return this._http
       .post(`${environment.mockServer}/login`, body, {
         headers,
       })
@@ -39,8 +38,8 @@ export class LoginService {
   }
 
   logout() {
-    this.cookieService.removeAll({ path: '/' });
-    this.router.navigate(['login']);
+    this._cookieService.removeAll({ path: '/' });
+    this._router.navigate(['login']);
   }
 
 }

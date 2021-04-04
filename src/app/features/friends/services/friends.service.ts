@@ -5,9 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class FreindsService {
 
   private _friends$: BehaviorSubject<Friend[]> = new BehaviorSubject<Friend[]>([]);
