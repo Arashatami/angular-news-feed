@@ -2,6 +2,7 @@ import { LoginService } from './../../services/login.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup = new FormGroup({});
-
+  loading: boolean = false;
   error: string = "";
 
 
@@ -35,11 +36,13 @@ export class LoginComponent implements OnInit {
   }
   submit() {
     if (this.loginForm.valid) {
-      this._loginService.loginUser(this.loginForm.value.email, this.loginForm.value.password).subscribe(
+      this.loading = true;
+      this._loginService.loginUser(this.loginForm.value.email, this.loginForm.value.password).pipe(finalize(() => {
+        this.loading = false;
+      })).subscribe(
         Res => {
           this._router.navigate(["home"]);
-        }
-        ,
+        },
         Err => {
           this.error = Err.error;
         }

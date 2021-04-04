@@ -35,7 +35,6 @@ export class HttpResponseInterceptor implements HttpInterceptor {
             this._router.navigate(['/login']);
           }
           else {
-            debugger
             this._snackBar.open(error.error);
           }
           throw error;
