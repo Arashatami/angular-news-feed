@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   submit() {
-    if (this.loginForm.valid) {
+    if (this.loginForm.valid && !this.loading) {
       this.loading = true;
       this._loginService.loginUser(this.loginForm.value.email, this.loginForm.value.password).pipe(finalize(() => {
         this.loading = false;
