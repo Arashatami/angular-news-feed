@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-title fxLayout="row" fxLayoutAlign="center center">
+    Login
+  </mat-card-title>
+  <mat-card-content fxLayout="row" fxLayoutAlign="center center">
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <mat-form-field appearance="outline" fxLayout="row">
+        <mat-label>email</mat-label>
+        <input
+          type="text"
+          matInput
+          placeholder="Email"
+          formControlName="email"
+        />
+        <mat-error *ngIf="loginForm.get('email')?.hasError('pattern')">
+          Email is not Valid.
+      </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" fxLayout="row">
+        <mat-label>Password</mat-label>
+        <input
+          type="password"
+          matInput
+          placeholder="Password"
+          formControlName="password"
+        />
+      </mat-form-field>
+
+      <p *ngIf="error" class="error">
+        {{ error }}
+      </p>
+
+      <div fxLayout="row" fxLayoutAlign="center">
+        <button type="submit"  mat-raised-button color="primary">Login</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
