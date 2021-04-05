@@ -8,6 +8,7 @@ import { NewsFeedComponent } from './components/news-feed/news-feed.component';
 import { CoreModule } from 'src/app/core/core.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { MenuService } from './services/menu.service';
 
 const Routes = [
   {
@@ -30,7 +31,8 @@ const Routes = [
   ],
   providers: [
     FriendsService,
-    NewsFeedService
+    NewsFeedService,
+    MenuService
   ]
 })
 export class FriendsModule { }
