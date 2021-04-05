@@ -10,7 +10,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 It's a simple mock server with ability for authentication. [JSON Server](https://github.com/typicode/json-server) and [JSON Server Auth](https://github.com/jeremyben/json-server-auth) are used for creating this mock server.
 
-
 ### Resources
 
 - `/friends`: CRUD for friends entities publicly available. Users with authentication can access them.
@@ -19,23 +18,20 @@ It's a simple mock server with ability for authentication. [JSON Server](https:/
 - `/favorite-news-feed`: CRUD for favorite NewsFeed entities, in which each entity has a user as owner
 - `/news-feed`: CRUD for NewsFeed entities
 
-
-
 ### Run Mock Server
 
 - Install packages
 
-    ```bash
-    npm install
-    ```
+  ```bash
+  npm install
+  ```
 
 - Start the server
 
-    ```bash
-    npm run server
-    ```
+  ```bash
+  npm run server
+  ```
 
-
-### Postman Collection
-
-You can import the provided collection in Postman to try the endpoints.
+login with :
+username: arash@example.com
+password: 123456
