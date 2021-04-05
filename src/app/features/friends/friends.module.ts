@@ -1,4 +1,5 @@
-import { FreindsService } from './services/friends.service';
+import { NewsFeedService } from './services/news-feed.service';
+import { FriendsService } from './services/friends.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
@@ -7,6 +8,7 @@ import { NewsFeedComponent } from './components/news-feed/news-feed.component';
 import { CoreModule } from 'src/app/core/core.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { MenuService } from './services/menu.service';
 
 const Routes = [
   {
@@ -28,7 +30,9 @@ const Routes = [
     SharedModule,
   ],
   providers: [
-    FreindsService
+    FriendsService,
+    NewsFeedService,
+    MenuService
   ]
 })
 export class FriendsModule { }

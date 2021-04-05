@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class MenuService {
 
   private sidenav: MatDrawer;

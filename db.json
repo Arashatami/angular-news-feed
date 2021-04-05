@@ -39,8 +39,40 @@
   ],
   "friends": [
     {
-      "userId": 1,
-      "name": "Arash Hatami"
+      "name": "Arash",
+      "id": 1
+    },
+    {
+      "name": "Alice",
+      "id": 2
+    },
+    {
+      "name": "Viktor",
+      "id": 3
+    },
+    {
+      "name": "Joe",
+      "id": 4
+    },
+    {
+      "name": "Mike",
+      "id": 5
+    },
+    {
+      "name": "Ava",
+      "id": 6
+    },
+    {
+      "name": "Sophie",
+      "id": 7
+    },
+    {
+      "name": "Emily",
+      "id": 8
+    },
+    {
+      "name": "Alex",
+      "id": 9
     }
   ],
   "favorite-news-feed": []

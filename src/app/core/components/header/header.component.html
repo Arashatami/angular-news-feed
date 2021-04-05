@@ -1,4 +1,4 @@
- <!-- todo add css variables and remove inline style -->
+<!-- todo add css variables and remove inline style -->
 <mat-toolbar>
   <div>
     <div class="navbar">
@@ -7,21 +7,12 @@
           mat-icon-button
           (click)="toggle()"
           [ngStyle.lt-md]="{ height: '100%' }"
-          style="display: flex; justify-content: center; align-items: center"
-        >
-          <mat-icon class="menu-logo" style="margin-top: 5px">menu</mat-icon>
-        </button>
-
-        <img class="logo" src="./assets/images/upkey-logo.png" />
-
-        <div
-          class="menu-nav-items"
-          fxHide
-          fxShow.lg
-          fxShow.md
-          fxShow.xl
+          fxLayout="row"
           fxLayoutAlign="center center"
-        ></div>
+        >
+          <mat-icon class="menu-logo">menu</mat-icon>
+        </button>
+        <img class="logo" src="./assets/images/upkey-logo.png" />
       </div>
     </div>
   </div>
