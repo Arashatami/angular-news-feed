@@ -13,10 +13,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from "@angular/material/input";
+import { RandomColorDirective } from './directives/random-color.directive';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [RandomColorDirective, RandomColorDirective],
   imports: [
     CommonModule,
     FlexLayoutModule,
@@ -47,7 +48,8 @@ import { MatInputModule } from "@angular/material/input";
     MatCardModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    RandomColorDirective
   ],
   providers: [
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 2500 } }
