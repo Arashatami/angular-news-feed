@@ -1,4 +1,12 @@
-<div class="friend-item" *ngFor="let friend of friends" fxLayout="row">
+<h1 class="header">Friends List</h1>
+<div
+  class="friend-item"
+  *ngFor="let friend of friends"
+  fxLayout="row"
+  fxLayoutAlign="start center"
+  [ngClass]="friend.id == selectedFriend.id ? 'selected' : ''"
+  (click)="selecteFriend(friend)"
+>
   <mat-icon appRandomColor>face</mat-icon>
-  <h3>{{ friend.name }}</h3>
+  <h3 class="mat-headline m0">{{ friend.name }}</h3>
 </div>

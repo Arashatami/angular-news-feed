@@ -10,7 +10,8 @@ import { FriendsService } from '../../services/friends.service';
 })
 export class FriendsListComponent implements OnInit {
 
-  friends: Friend[] = []
+  friends: Friend[] = [];
+  selectedFriend: Friend;
   subscription;
   constructor(
     private _friendService: FriendsService
@@ -25,6 +26,10 @@ export class FriendsListComponent implements OnInit {
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
+  }
+
+  selecteFriend(friend: Friend) {
+    this.selectedFriend = friend;
   }
 
 }

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { NgScrollbarModule } from 'ngx-scrollbar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -27,7 +26,6 @@ import { RandomColorDirective } from './directives/random-color.directive';
     MatIconModule,
     MatDialogModule,
     MatMenuModule,
-    NgScrollbarModule,
     MatSnackBarModule,
     MatCardModule,
     MatFormFieldModule,
@@ -43,7 +41,6 @@ import { RandomColorDirective } from './directives/random-color.directive';
     MatIconModule,
     MatDialogModule,
     MatMenuModule,
-    NgScrollbarModule,
     MatSnackBarModule,
     MatCardModule,
     MatFormFieldModule,
