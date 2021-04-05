@@ -1,1 +1,3 @@
-<p>news-feed works!</p>
+<ng-container *ngFor="let newsFeed of newsFeeds">
+  <app-news-feed-item [newsFeed]="newsFeed"></app-news-feed-item>
+</ng-container>

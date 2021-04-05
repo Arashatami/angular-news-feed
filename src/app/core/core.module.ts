@@ -20,6 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
   exports: [
     HeaderComponent,
     HttpClientModule
-  ]
+  ],
 })
 export class CoreModule { }

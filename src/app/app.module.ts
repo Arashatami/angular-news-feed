@@ -28,12 +28,12 @@ import { HttpResponseInterceptor } from './core/interceptor/http-response-interc
       provide: HTTP_INTERCEPTORS,
       useClass: HttpRequestInterceptor,
       multi: true,
-  },
-  {
+    },
+    {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpResponseInterceptor,
       multi: true,
-  },
+    }
   ],
   bootstrap: [AppComponent]
 })

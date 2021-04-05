@@ -1,0 +1,28 @@
+<mat-card fxLayout="row" fxLayoutAlign="space-between">
+  <div *ngIf="newsFeed.type == 1">
+    <span>{{ newsFeed.content[0] }}</span>
+    <b class="added"> added </b>
+    <span>{{ newsFeed.content[1] }}</span>
+    <span> as a friend.</span>
+  </div>
+  <div *ngIf="newsFeed.type == 2">
+    <span>{{ newsFeed.content[0] }}</span>
+    <b class="liked"> liked </b>
+    <span>{{ newsFeed.content[1] }}</span>
+    <span> item.</span>
+  </div>
+  <div *ngIf="newsFeed.type == 3">
+    <span>{{ newsFeed.content[0] }}</span>
+    <b class="uploaded"> uploaded a new photo.</b>
+  </div>
+  <mat-icon
+    class="liked"
+    *ngIf="isFavorite(newsFeed.id); else not"
+    (click)="delete(newsFeed)"
+  >
+    favorite</mat-icon
+  >
+  <ng-template #not>
+    <mat-icon (click)="add(newsFeed)">favorite_border</mat-icon>
+  </ng-template>
+</mat-card>

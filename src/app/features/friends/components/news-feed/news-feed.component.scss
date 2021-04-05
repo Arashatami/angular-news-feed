@@ -1,0 +1,9 @@
+:host {
+  ::ng-deep {
+    app-news-feed-item {
+      mat-card {
+        margin: 10px 15px;
+      }
+    }
+  }
+}

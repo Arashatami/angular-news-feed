@@ -9,6 +9,10 @@ import { CoreModule } from 'src/app/core/core.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { MenuService } from './services/menu.service';
+import { NewsFeedItemComponent } from './components/news-feed-item/news-feed-item.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpRequestInterceptor } from 'src/app/core/interceptor/http-request-interceptor.service';
+import { HttpResponseInterceptor } from 'src/app/core/interceptor/http-response-interceptor.service';
 
 const Routes = [
   {
@@ -21,7 +25,8 @@ const Routes = [
   declarations: [
     HomeComponent,
     FriendsListComponent,
-    NewsFeedComponent
+    NewsFeedComponent,
+    NewsFeedItemComponent
   ],
   imports: [
     RouterModule.forChild(Routes),
@@ -32,7 +37,17 @@ const Routes = [
   providers: [
     FriendsService,
     NewsFeedService,
-    MenuService
+    MenuService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpRequestInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpResponseInterceptor,
+      multi: true,
+    }
   ]
 })
 export class FriendsModule { }

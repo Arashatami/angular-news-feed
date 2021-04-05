@@ -1,0 +1,11 @@
+.added {
+  color: rgb(0, 89, 255);
+}
+.liked {
+  color: rgb(255, 0, 149);
+  transition: color 1s;
+}
+
+mat-icon {
+  cursor: pointer;
+}

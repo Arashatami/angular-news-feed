@@ -13,9 +13,7 @@ import { LoginService } from '../services/login.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class HttpResponseInterceptor implements HttpInterceptor {
 
   constructor(
