@@ -1,5 +1,5 @@
 import { NewsFeedService } from './services/news-feed.service';
-import { FreindsService } from './services/friends.service';
+import { FriendsService } from './services/friends.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
@@ -29,7 +29,7 @@ const Routes = [
     SharedModule,
   ],
   providers: [
-    FreindsService,
+    FriendsService,
     NewsFeedService
   ]
 })

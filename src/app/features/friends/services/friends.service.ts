@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 
 @Injectable()
-export class FreindsService {
+export class FriendsService {
 
   private _friends$: BehaviorSubject<Friend[]> = new BehaviorSubject<Friend[]>([]);
 
