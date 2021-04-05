@@ -4,7 +4,7 @@
   *ngFor="let friend of friends"
   fxLayout="row"
   fxLayoutAlign="start center"
-  [ngClass]="friend.id == selectedFriend.id ? 'selected' : ''"
+  [ngClass]="friend?.id == selectedFriend?.id ? 'selected' : ''"
   (click)="selecteFriend(friend)"
 >
   <mat-icon appRandomColor>face</mat-icon>

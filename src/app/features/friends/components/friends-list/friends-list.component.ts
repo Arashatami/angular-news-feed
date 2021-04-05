@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Friend } from 'src/app/core/models/friend';
 import { FriendsService } from '../../services/friends.service';
+import { NewsFeedService } from '../../services/news-feed.service';
 
 @Component({
   selector: 'app-friends-list',
@@ -14,7 +15,8 @@ export class FriendsListComponent implements OnInit {
   selectedFriend: Friend;
   subscription;
   constructor(
-    private _friendService: FriendsService
+    private _friendService: FriendsService,
+    private _newsFeedService: NewsFeedService
   ) {
     this.subscription = this._friendService.Friends.subscribe(res => {
       this.friends = res;
@@ -30,6 +32,7 @@ export class FriendsListComponent implements OnInit {
 
   selecteFriend(friend: Friend) {
     this.selectedFriend = friend;
+    this._newsFeedService.selectedFriend = friend;
   }
 
 }

@@ -20,7 +20,7 @@ export class NewsFeedService {
 
   public set selectedFriend(friend: Friend) {
     this._selectedFriend = friend;
-    this.getNewsFeed(friend.id);
+    this.getNewsFeed(friend.id).subscribe(()=>{});
   }
   public get selectedFriend(): Friend {
     return this._selectedFriend;
