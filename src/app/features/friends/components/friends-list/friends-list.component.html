@@ -1,3 +1,4 @@
-<div *ngFor="let friend of friends" fxLayout="row">
-  {{friend.name}}
+<div class="friend-item" *ngFor="let friend of friends" fxLayout="row">
+  <mat-icon>face</mat-icon>
+  <h3>{{ friend.name }}</h3>
 </div>
